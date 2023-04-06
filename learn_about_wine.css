@@ -1,0 +1,355 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Alice';
+    background-color: #560216;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 15vh;
+    max-height: 20vh;
+    background-color: #560216;
+}
+
+.logo {
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger > div {
+    width: 25px;
+    height: 2px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+@media screen and (max-width: 1024px) {
+    nav-links{
+        width: 60%;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #560216;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFadeIn{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes navLinkFadeOut{
+    from{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    to{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(+45deg) translate(-5px, -5px);
+}
+
+.wine_image{
+    position: fixed;
+    }
+
+.text_wrapper{
+    position:relative;
+    background-color: transparent;
+
+}
+.wine_fade{
+    animation: fadeIn ease 5s;
+    -webkit-animation: fadeIn ease 5s;
+    -moz-animation: fadeIn ease 5s;
+    -o-animation: fadeIn ease 5s;
+    -ms-animation: fadeIn ease 5s;
+  }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+ 
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+    .background-text {
+        background-color: #560216; 
+        color: white;
+        font-weight: normal;
+        font-family: Alice;
+        font-size: 50px;
+        border: 5px solid white;
+        position: fixed;
+        top: 50%;
+        bottom:50%;
+        left:50%; 
+        right:50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 100%;
+        padding: 60px;
+        padding-top: 10px;
+        text-align: center;
+    }
+  
+    .wine_fade{
+        height: 100%;
+        background-position: fill;
+      background-repeat: no-repeat;
+      background-size: cover;
+      float: none;
+    }
+    @media screen and (max-width: 768px){
+    .background-text{
+        height: 50%;
+        width:20%;
+        left:20%;
+        right:80%;
+        position: absolute;
+        border:none;
+        font-size: 32px;
+        text-align: center;
+        background-color: transparent;
+        color:#aaaaaa;
+    }
+  }
+
+.Europe a{
+    position: absolute;
+    align-items: center;
+    width:30%;
+    Height:30%;
+    bottom: 0px;
+    top:900px;
+    right: 0px;
+    left:90px;
+    background-color:transparent;
+    color: white;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-family: Alice;
+    font-size:50px;
+    text-align: left;
+    opacity: 1;
+    transition: 0.3s;
+    float: none;
+    border:none;
+    text-decoration: none;
+}
+.Europe:hover {opacity: 0.10}
+.info-box{
+    position: relative;
+}
+
+.South-America a{
+    position: absolute;
+    align-items: right;
+    width:30%;
+    Height:30%;
+    bottom: 0px;
+    top:1700px;
+    right:00px;
+    left:900px;
+    background-color:transparent;
+    color: white;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-family: Alice;
+    font-size:50px;
+    text-align: left;
+    opacity: 1;
+    transition: 0.3s;
+    float: none;
+    border:none;
+    text-decoration: none;
+}
+.South-America:hover {opacity: 0.10}
+.info-box{
+    position: relative;
+}
+.France a{
+    position: absolute;
+    align-items: right;
+    text-decoration: none;
+    width:30%;
+    Height:30%;
+    bottom: 0px;
+    top:110px;
+    right:00px;
+    left:900px;
+    background-color:transparent;
+    color: white;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-family: Alice;
+    font-size:50px;
+    text-align: left;
+    opacity: 1;
+    transition: 0.3s;
+    float: none;
+    border:none;
+}
+.France :hover {opacity: 0.10}
+.info-box{
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+  img {
+    max-width: 100%
+  }
+  .image {
+   width:500px;
+   padding:0px
+  }
+  .text {
+    font-size: 19px;
+    padding-left:10px;
+    color: white;
+    padding-bottom: 0px;
+    width:50%;
+    padding-top: 0px;
+    padding-bottom:20px ;
+    padding-right: 0;
+  }
+  .container-temp div{
+    border:#aaaaaa;
+    position:absolute;
+    display: contents;
+    width:50%;
+    height: 50%;
+   justify-content: center;
+   }
+   .old-wine{ 
+    font-size: 19px;
+    padding: left 1px;
+    color: white;
+    padding-bottom: 10px;
+    width:100%;
+    padding-top: 10px;
+    display: flexbox;
+    align-items: center;
+    position: absolute;
+   
+
+   }
+   .temp-text {
+    font-size: 19px;
+    padding-left:0;
+    color: white;
+    padding-bottom: 10px;
+    width:25%;   
+}
+.selecting{
+    display: flex;
+    align-items: center;
+    width:50px
+    height: 50%;
+    padding-left:-100px;
+
+}
+.text1{
+    display:flex
+    align-items:center;
+    position: absolute;
+    color:white;
+    padding-right:50px;
+  
+}
